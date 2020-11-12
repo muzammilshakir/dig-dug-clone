@@ -3,7 +3,8 @@
   "version": "2.1.3",
   "main": "main.js",
   "scripts": {
-    "heroku-postbuild": "npm install -g grunt-cli"
+    "heroku-postbuild": "npm install -g grunt-cli",
+    "start": "grunt serve"
   },
   "devDependencies": {
     "grunt": "^1.0.1",

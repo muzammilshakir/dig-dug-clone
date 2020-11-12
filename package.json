@@ -3,10 +3,10 @@
   "version": "2.1.3",
   "main": "main.js",
   "scripts": {
-    "heroku-postbuild": "npm install grunt-cli",
+    
     "start": "grunt serve"
   },
-  "devDependencies": {
+  "dependencies": {
     "grunt": "^1.0.1",
     "grunt-asar": "bwin/grunt-asar#update-asar",
     "grunt-contrib-clean": "^1.0.0",

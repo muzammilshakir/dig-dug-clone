@@ -18,10 +18,18 @@ game.LevelManager = me.Container.extend({
 				]
 			},
 
-			monsters: {
+			chips: {
 
 				"level1": [
 					[65, 103],
+					//[305, 345]
+				]
+				
+			},
+			monsters: {
+
+				"level1": [
+					//[65, 103],
 					[305, 345]
 				]
 				
@@ -47,16 +55,27 @@ game.LevelManager = me.Container.extend({
 
 	createMonsters : function(levelName) {
 		let _this = this;
-		this.data.monsters[levelName].forEach(function(monster) {
+		this.data.chips[levelName].forEach(function(monster) {
 			
-	      	_this.addChild(me.pool.pull("monster", monster[0], monster[1]), 3);     
+			  _this.addChild(me.pool.pull("chips", monster[0], monster[1]), 3);
+			  //_this.addChild(me.pool.pull("chips", monster[0]), 3);     
 	               
 		});
+		this.data.monsters[levelName].forEach(function(monster) {
+			
+			_this.addChild(me.pool.pull("monster", monster[0], monster[1]), 3);
+			//_this.addChild(me.pool.pull("chips", monster[0]), 3);     
+				 
+	  	});
 		this.updateChildBounds();
 		this.createdMonsters = true;
 	},
 
 	update :  function(dt) {
+		if(this.getChildByName("chips").length === 0 && this.createdMonsters) {
+			game.data.highScore += game.data.score;
+			game.playScreen.reset();
+		}
 		if(this.getChildByName("monster").length === 0 && this.createdMonsters) {
 			game.data.highScore += game.data.score;
 			game.playScreen.reset();

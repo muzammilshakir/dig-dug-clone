@@ -1,14 +1,14 @@
-game.Monster = me.Entity.extend({
+game.Chips = me.Entity.extend({
 	init :function(x, y) {
 		
 
 		this._super(me.Entity, "init", [x, y, {
-			image: me.loader.getImage("burger"),
-			width: game.Monster.width, 
-			height: game.Monster.height
+			image: me.loader.getImage("chips"),
+			width: game.Chips.width, 
+			height: game.Chips.height
 		}]);
 		
-		this.name = "monster";
+		this.name = "chips";
 		this.body.collisionType = me.collision.types.ENEMY_OBJECT;
 
 		this.body.removeShape(this.body.getShape(0));
@@ -166,8 +166,8 @@ game.Monster = me.Entity.extend({
 });
 
 
-game.Monster.width = 24;
-game.Monster.height = 24;
+game.Chips.width = 24;
+game.Chips.height = 24;
 
 
 

@@ -70,6 +70,14 @@ game.HUD.ScoreItem = me.Renderable.extend({
         // draw it baby !
         this.font.draw (renderer, game.data.score, 600, 50);
         this.font.draw (renderer, game.data.highScore, 600, 100);
+        this.font.draw (renderer, 'Burger', 590, 150);
+        this.font.draw (renderer, 'Chips', 580, 200);
+        var img = me.loader.getImage("burgerMin");
+        var imgChips = me.loader.getImage("chipsMin");
+        //this.font.draw (renderer, img, 600, 250);
+        renderer.drawImage (img, 600, 130);
+        renderer.drawImage (imgChips, 600, 180);
+        //this.addChild(me.pool.pull("chips", 600, 250), 3);
     }
 
 });

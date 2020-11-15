@@ -77,6 +77,7 @@ game.HUD.ScoreItem = me.Renderable.extend({
         //this.font.draw (renderer, img, 600, 250);
         renderer.drawImage (img, 600, 130);
         renderer.drawImage (imgChips, 600, 180);
+        //this.font.draw (renderer, 'Remove dirt and avoid carbohydrates', 700, 250);
         //this.addChild(me.pool.pull("chips", 600, 250), 3);
     }
 

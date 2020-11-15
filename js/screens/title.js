@@ -29,7 +29,10 @@ game.TitleScreen = me.ScreenObject.extend({
                 
                 
                 this.font.draw(renderer, this.title, this.pos.x + 230, this.pos.y + 140);
-                this.font.draw(renderer, this.start, this.pos.x + 100, this.pos.y + 240);
+                this.font.draw(renderer, 'Remove Dirt', this.pos.x + 190, this.pos.y + 180);
+                this.font.draw(renderer, '&', this.pos.x + 290, this.pos.y + 220);
+                this.font.draw(renderer, 'avoid carbohydrates', this.pos.x + 105, this.pos.y + 250);
+                this.font.draw(renderer, this.start, this.pos.x + 100, this.pos.y + 400);
                     
             },
             update : function(dt) {

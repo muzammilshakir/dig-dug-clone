@@ -1,4 +1,4 @@
-melonJS boilerplate
+## Dig Dug Game using Melon JS
 -------------------------------------------------------------------------------
 
 features :
